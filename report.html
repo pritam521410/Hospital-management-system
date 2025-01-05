@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Patient Report</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('background.jpg'); /* Path to your background image */
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  h2 {
+    text-align: center;
+    color: #333;
+  }
+  .form-group {
+    margin-bottom: 20px;
+  }
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  input[type="text"],
+  input[type="number"],
+  input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #333;
+  }
+  input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  .status {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .status span {
+    font-weight: bold;
+    font-size: 20px;
+    color: #333;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Patient Report</h2>
+  <form action="#" method="post">
+    <div class="form-group">
+      <label for="patientName">Patient Name</label>
+      <input type="text" id="patientName" name="patientName" required>
+    </div>
+    <div class="form-group">
+      <label for="registrationNumber">Registration Number</label>
+      <input type="number" id="registrationNumber" name="registrationNumber" required>
+    </div>
+    <div class="form-group">
+      <label for="hospitalName">Hospital Name</label>
+      <input type="text" id="hospitalName" name="hospitalName" required>
+    </div>
+    <div class="form-group">
+      <label for="captcha">Captcha</label>
+      <!-- Assuming captcha input is a simple number input -->
+      <input type="number" id="captcha" name="captcha" required>
+      <!-- Example of a simple captcha -->
+      <img src="captcha_image.jpg" alt="Captcha Image">
+    </div>
+    <div class="form-group">
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+  <div class="status">
+    <span>Status: In Progress</span>
+  </div>
+</div>
+<footer class="footer">
+    <div class="contain">
+     <div class="row">
+       <div class="footer-col">
+         <h4>Services</h4>
+         <ul>
+           <li><a href="#">about us</a></li>
+           <li><a href="#">our services</a></li>
+           <li><a href="#">privacy policy</a></li>
+           <li><a href="#">affiliate program</a></li>
+         </ul>
+       </div>
+       <div class="footer-col">
+         <h4>get help</h4>
+         <ul>
+           <li><a href="#">FAQ</a></li>
+           <li><a href="#">Customer Support</a></li>
+           <li><a href="#">Inquiry</a></li>
+           <!-- <li><a href="#"></a></li>
+           <li><a href="#">payment options</a></li> -->
+         </ul>
+       </div>
+       <!-- <div class="footer-col">
+         <h4>online shop</h4>
+         <ul>
+           <li><a href="#">watch</a></li>
+           <li><a href="#">bag</a></li>
+           <li><a href="#">shoes</a></li>
+           <li><a href="#">dress</a></li>
+         </ul>
+       </div> -->
+       <div class="footer-col">
+         <h4>follow us</h4>
+         <div class="social-links">
+           <a href="#"><i class="fab fa-facebook-f"></i></a>
+           <a href="#"><i class="fab fa-twitter"></i></a>
+           <a href="#"><i class="fab fa-instagram"></i></a>
+           <a href="#"><i class="fab fa-linkedin-in"></i></a>
+         </div>
+       </div>
+     </div>
+    </div>
+ </footer>
+
+</body>
+</html> 

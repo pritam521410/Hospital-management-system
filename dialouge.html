@@ -1,0 +1,53 @@
+Dialogue box code 👇👇👇
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        dialog {
+            position: absolute;
+            background-color: #474747;
+            color: white;
+            border-radius: 31px;
+            padding: 38px;
+            margin: 1px 200px;
+            border: 3px solid black;
+        }
+
+        button {
+            background-color: blue;
+            border: 6px double white;
+            padding: 8px 14px;
+            border-radius: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="opn">open</button>
+    <dialog id="dlog" close>
+        <p>Lorem ipsum dolor sit amet...</p>
+        <button id="btn">Close</button>
+    </dialog>
+
+    <script>
+        const opn = document.getElementById('opn');
+        const dlog = document.getElementById('dlog');
+        const btn = document.getElementById('btn');
+
+        opn.addEventListener('click', () => {
+            dlog.setAttribute('open', '');
+        });
+
+        btn.addEventListener('click', () => {
+            dlog.close();
+        });
+    </script>
+</body>
+
+</html>

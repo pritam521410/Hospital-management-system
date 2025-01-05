@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="firstaid.css">
+    <title>First Aid Information</title>
+    
+</head>
+<body>
+    <div class="nav_logo">
+        <div class="logo">
+            <h3 style="color: #ffffff;">Health service +</h3>
+        </div>
+    </div>
+    <div class="navvar">
+        <div class="box1">
+            <ul>
+                <li><a href="C:\Users\sonuj\OneDrive\Desktop\HEALTH SERVICE\Home.html">Home</a></li>
+                <li><a href="C:\Users\sonuj\OneDrive\Desktop\HEALTH SERVICE\Health_parameters.html">Health Parameters</a></li>
+                <li><a href="C:\Users\sonuj\OneDrive\Desktop\HEALTH SERVICE\Health_parameters.html">Nearby Doctors</a></li>
+                <li><a href="C:\Users\sonuj\OneDrive\Desktop\HEALTH SERVICE\report.html">My Reports</a></li>
+                <li><a href="C:\Users\sonuj\OneDrive\Desktop\HEALTH SERVICE\blood_donation.html">Blood Bank</a></li>
+                <li><a href="C:\Users\sonuj\OneDrive\Desktop\HEALTH SERVICE\patient_care.html">patient Care</a></li>
+                <li><a href="#Insaurance Services">Insaurance Services</a></li>
+                <li><a href="#Insaurance Services">NGO & Trusts</a></li>
+            </ul>
+              
+        </div>
+        <!-- <div class="box"> 
+            <select>
+                <option value="0">Other services:</option>
+                <option value="1"><a href="#Blood Bank">Blood Bank</a></option>
+                <option value="2"><a href="#patient Care">patient Care</a></option>
+                <option value="3"><a href="#Insaurance Services">Insaurance Services</a></option>
+            </select>
+        </div> -->
+        <div class="sign_in">
+            <div id="sign_up" ><b><a style="font-size: 20px" style="color: #ffffff" href="#">Sign up</a></b></div>
+            <div id="Login sign_up" ><b><a style="font-size: 20px" tyle="color: #ffffff" href="#">Log in</a></b></div>
+        </div>
+          
+    </div>
+    <main>
+    <header>
+        <h1>First Aid Information</h1>
+    </header>
+    <div class="dabba">
+        <label for="issue">Select Issue:</label>
+        <select id="issue">
+            <option value="bleeding">Bleeding</option>
+            <option value="burn">Burn</option>
+            <option value="cut">Cut</option>
+            <option value="choke">Choking</option>
+            <option value="fractures">Fractures</option>
+            <option value="sprains">Sprains</option>
+            <option value="shock">Shock</option>
+            <option value="cardiac_arrest">Cardiac Arrest</option>
+            <option value="heat_stroke">Heat Stroke</option>
+            <option value="hypothermia">Hypothermia</option>
+            <option value="allergic_reaction">Allergic Reaction</option>
+            <option value="head_injury">Head Injury</option>
+            <option value="snake_bite">Snake Bite</option>
+        </select>
+        
+        <div id="firstAidContent">
+            <!-- First aid information will be displayed here -->
+        </div>
+    </div>
+</main>
+<footer class="footer">
+    <div class="contain">
+     <div class="row">
+       <div class="footer-col">
+         <h4>Services</h4>
+         <ul>
+           <li><a href="#">about us</a></li>
+           <li><a href="#">our services</a></li>
+           <li><a href="#">privacy policy</a></li>
+           <li><a href="#">affiliate program</a></li>
+         </ul>
+       </div>
+       <div class="footer-col">
+         <h4>get help</h4>
+         <ul>
+           <li><a href="#">FAQ</a></li>
+           <li><a href="#">Customer Support</a></li>
+           <li><a href="#">Inquiry</a></li>
+           <!-- <li><a href="#"></a></li>
+           <li><a href="#">payment options</a></li> -->
+         </ul>
+       </div>
+       <!-- <div class="footer-col">
+         <h4>online shop</h4>
+         <ul>
+           <li><a href="#">watch</a></li>
+           <li><a href="#">bag</a></li>
+           <li><a href="#">shoes</a></li>
+           <li><a href="#">dress</a></li>
+         </ul>
+       </div> -->
+       <div class="footer-col">
+         <h4>follow us</h4>
+         <div class="social-links">
+           <a href="#"><i class="fab fa-facebook-f"></i></a>
+           <a href="#"><i class="fab fa-twitter"></i></a>
+           <a href="#"><i class="fab fa-instagram"></i></a>
+           <a href="#"><i class="fab fa-linkedin-in"></i></a>
+         </div>
+       </div>
+     </div>
+    </div>
+ </footer>
+    <script>
+        document.getElementById('issue').addEventListener('change', function() {
+            var issue = this.value;
+            var firstAidContent = document.getElementById('firstAidContent');
+            
+            // Clear previous content
+            firstAidContent.innerHTML = '';
+
+            // Add new content based on the selected issue
+            switch(issue) {
+                case 'burn':
+                    firstAidContent.innerHTML = '<h2>Burn First Aid</h2><p>...</p>'; // Add burn first aid information
+                    break;
+                case 'cut':
+                    firstAidContent.innerHTML = '<h2>Cut First Aid</h2><p>...</p>'; // Add cut first aid information
+                    break;
+                case 'choke':
+                    firstAidContent.innerHTML = '<h2>Choking First Aid</h2><p>...</p>'; // Add choking first aid information
+                    break;
+                // Add more cases for additional issues
+                default:
+                    firstAidContent.innerHTML = '<p>No first aid information available for this issue.</p>';
+            }
+
+            // Display the first aid content
+            firstAidContent.style.display = 'block';
+        });
+    </script>
+</body>
+</html>

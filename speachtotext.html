@@ -1,0 +1,34 @@
+Yeh so please make the navigator method under the function Here is the working code of Speech to text Converter 👇👇👇
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Voice to Text Generator</title>
+</head>
+<body>
+    <h1>Speech to text Converter</h1>
+    <textarea id="output" rows="4" cols="50"></textarea><br>
+    <button id="start-btn">Start</button>
+    <button id="stop-btn">Stop</button>
+    
+<script>
+const recognition =  new webkitSpeechRecognition();
+recognition.lang='हिं ph';
+recognition.interimResults = true;
+recognition.continuous = true;
+
+document.getElementById("start-btn")
+.onclick = () => recognition.start();
+
+
+document.getElementById("stop-btn")
+.onclick = () => recognition.stop();
+
+recognition.onresult = event => {
+output.value = event.results[event.results.length - 1][0].transcript;
+navigator.mediaDevices.getUserMedia({ audio: true });
+}
+</script>
+</body>
+</html>

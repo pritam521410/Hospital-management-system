@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Services</title>
+    <link rel="stylesheet" href="home1.css">
+    <style>
+        body {
+          background-image: url('C:\\Users\\sonuj\\OneDrive\\Desktop\\hospital allotment\\th (1).jpeg');
+        }
+    </style>
+</head>
+<script src="//code.tidio.co/xox0z6cl4wvljwdedigjio3uwdox09bd.js" async></script>
+<script>
+    
+    const stateDistrictData = {
+        "Andhra Pradesh" : ["Anantapur", "Chittoor", "East Godavari", "Guntur", "Krishna", "Kurnool", "Nellore", "Prakasam", "Srikakulam", "Visakhapatnam", "Vizianagaram", "West Godavari", "YSR Kadapa"],
+        "Arunachal Pradesh": ["Tawang", "West Kameng", "East Kameng", "Papum Pare", "Kurung Kumey", "Kra Daadi", "Lower Subansiri", "Upper Subansiri", "West Siang", "East Siang", "Siang", "Upper Siang", "Lower Siang", "Dibang Valley", "Anjaw", "Lohit", "Namsai", "Changlang", "Tirap", "Longding"],
+        "Bihar": ["Araria","Arwal","Aurangabad","Banka","Begusarai","Bhagalpur","Bhojpur","Buxar","Darbhanga","East Champaran","Motihari","Gaya","Gopalganj","Jamui","Jehanabad","Khagaria","Kishanganj","Kaimur","Katihar","Lakhisarai","Madhubani","Munger",
+        "Madhepura","Muzaffarpur","Nalanda","Nawada","Patna","Purnia","Rohtas","Sasaram","Saharsa","Samastipur","Sheohar","Sheikhpura","Saran","Sitamarhi","Supaul","Siwan","Vaishali","West chmaparan"]
+
+
+    };
+
+    
+    function displayStateDistrictData() {
+        const dataDiv = document.getElementById("data");
+        let html = "<ul>";
+        for (const state in stateDistrictData) {
+            html += `<li><strong>${state}</strong>: ${stateDistrictData[state].join(", ")}</li>`;
+        }
+        html += "</ul>";
+        dataDiv.innerHTML = html;
+    }
+    displayStateDistrictData();
+</script>
+
+
+<body>
+    <header>
+        <h1>Healthcare Services</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+            </ul>
+        </nav>
+    </header>
+
+   <div class="h">
+    <section id="home">
+        <h2>Welcome to Our Healthcare Services</h2>
+       
+    </section>
+   </div>
+    
+    <section id="about">
+        <h2>About Us</h2>
+    
+    </section>
+
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <ul>
+            <li>Primary Care</li>
+            <li>Specialized Treatments</li>
+            <li>Emergency Services</li>
+            <li>Allotment booking</li>
+        </ul>
+    </section>
+  
+
+    <form id="hospitalSearchForm">
+        <label for="location">Location:</label>
+        <label for="state">Search by Location:</label>
+        <select id="state" name="state">
+            <option value="" disabled selected>Select State</option>
+           
+            <option value="state1">Andhra Pradesh</option>
+                <option value="state2">Arunachal Pradesh</option>
+                <option value="state3">Assam</option>
+                <option value="state4">Bihar</option>
+                <option value="state5">Chhattisgarh</option>
+                <option value="state6">Goa</option>
+                <option value="state7">Gujarat</option>
+                <option value="state8">Haryana</option>
+                <option value="state9">Himachal Pradesh</option>
+                <option value="state10">Jharkhand</option>
+                <option value="state11">Karnataka</option>
+                <option value="state12">Kerala</option>
+                <option value="state13">Madhya Pradesh</option>
+                <option value="state14">Maharashtra</option>
+                <option value="state15">Manipur</option>
+                <option value="state16">Meghalaya</option>
+                <option value="state17">Mizoram</option>
+                <option value="state18">Nagaland</option>
+                <option value="state19">Odisha</option>
+                <option value="state20">Punjab</option>
+                <option value="state21">Rajasthan</option>
+                <option value="state22">Sikkim</option>
+                <option value="state23">Tamil Nadu</option>
+                <option value="state24">Telangana</option>
+                <option value="state25"> Tripura</option>
+                <option value="state26">Uttar Pradesh</option>
+                <option value="state27">Uttarakhand</option>
+                <option value="state28">West Bengal</option>
+                <option value="state28">Delhi</option>
+            
+        </select>
+        <select id="district" name="district">
+            <option value="" disabled selected>Select District</option>
+            <option value="district1"> BHAGALPUR</option>
+            <option value="district2"> Baktiyarpur</option>
+            <option value="district3"> Darbhanga</option>
+            <option value="district4"> Gaya</option>
+            <option value="district5"> Muzaffarpur</option>
+            <option value="district6"> Madhubani</option>
+            
+            <option value="district7"> Patna</option>
+            <option value="district8"> saharsa</option>
+            <option value="district9"> Sasaram</option>
+            <option value="district10"> madhepura</option>
+        </select>
+        <button type="button" onclick="searchHospitals()">Search</button>
+        <label for="hospitalName">Hospital Name:</label>
+        <input type="text" id="hospitalName" name="hospitalName" placeholder="Enter Hospital Name">
+        <a href="disease.html">
+        <button type="button" onclick="searchHospitals()">Next</button>
+        </a>
+    </form>
+    
+    <div id="searchResults">
+       
+    </div>
+
+    <script>
+        function searchHospitals() {
+          
+            var location = document.getElementById("location").value;
+            var hospitalName = document.getElementById("hospitalName").value;
+            
+            
+            var searchResults = performSearch(location, hospitalName);
+            
+          
+            displayResults(searchResults);
+        }
+
+        function performSearch(location, hospitalName) {
+            
+            var hospitals = [
+                { name: "Hospital A", location: "Location X" },
+                { name: "Hospital B", location: "Location Y" },
+                { name: "Hospital C", location: "Location X" },
+                { name: "Hospital D", location: "Location Z" },
+            ];
+            
+            // Filter hospitals based on user input
+            var results = hospitals.filter(function(hospital) {
+                return (
+                    (location === "" || hospital.location.toLowerCase().includes(location.toLowerCase())) &&
+                    (hospitalName === "" || hospital.name.toLowerCase().includes(hospitalName.toLowerCase()))
+                );
+            });
+            
+            return results;
+        }
+
+        function displayResults(results) {
+            var resultsDiv = document.getElementById("searchResults");
+            resultsDiv.innerHTML = "";
+            
+            if (results.length === 0) {
+                resultsDiv.innerHTML = "No hospitals found.";
+            } else {
+                var ul = document.createElement("ul");
+                results.forEach(function(hospital) {
+                    var li = document.createElement("li");
+                    li.textContent = "Hospital Name: " + hospital.name + ", Location: " + hospital.location;
+                    ul.appendChild(li);
+                });
+                resultsDiv.appendChild(ul);
+            }
+        }
+        </script>
+         <a href="registeration.html">
+        <section id="EMERGENCY">
+            <h2>EMERGENCY</h2>
+           </a>
+        </section>
+    <footer>
+        <p>&copy; </p>
+    </footer>
+</body>
+</html>

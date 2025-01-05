@@ -1,0 +1,56 @@
+YouTube like online offline status code👇👇👇
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    #online{
+        background-color: rgb(31, 161, 31);
+        padding: 5px;
+        color: white;
+        font-weight: 600;
+        text-align: center;
+        position: absolute;
+        width: 100vw;
+        bottom: 0;
+     
+     
+    }
+    #ofline{
+        background-color: rgb(63, 66, 63);
+        padding: 5px;
+        color: white;
+        font-weight: 600;
+        text-align: center;
+        position: absolute;
+        width: 100vw;
+        bottom: 0;
+     
+   
+       
+
+    }
+</style>
+</head>
+
+<body>
+    <div id="state">
+        <div id='ofline'>No internet Connection!</div>
+    </div>
+    <script>
+        function isOnline() {
+            return navigator.onLine;
+        }
+        if (isOnline()) {
+            state.innerHTML="<div id='online'>Back Online!</div>"
+        }else {
+            state.innerHTML="   <div id='ofline'>No internet Connection!</div>"
+        }
+    </script>
+</body>
+
+</html>

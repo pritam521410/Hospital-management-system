@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="resistration.css">
+    <title>User Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav_logo">
+        <div class="logo">
+            <h3 style="color: #ffffff;">Health service +</h3>
+        </div>
+    </div>
+    <div class="navvar">
+        <div class="box1">
+            <ul>
+                <li><a href="C:\Users\sonuj\OneDrive\Desktop\HEALTH SERVICE\Home.html">Home</a></li>
+                <li><a href="C:\Users\sonuj\OneDrive\Desktop\HEALTH SERVICE\Health_parameters.html">Health Parameters</a></li>
+                <li><a href="C:\Users\sonuj\OneDrive\Desktop\HEALTH SERVICE\Health_parameters.html">Nearby Doctors</a></li>
+                <li><a href="C:\Users\sonuj\OneDrive\Desktop\HEALTH SERVICE\report.html">My Reports</a></li>
+                <li><a href="C:\Users\sonuj\OneDrive\Desktop\HEALTH SERVICE\blood_donation.html">Blood Bank</a></li>
+                <li><a href="C:\Users\sonuj\OneDrive\Desktop\HEALTH SERVICE\patient_care.html">patient Care</a></li>
+                <li><a href="#Insaurance Services">Insaurance Services</a></li>
+                <li><a href="#Insaurance Services">NGO & Trusts</a></li>
+            </ul>
+              
+        </div>
+        <!-- <div class="box"> 
+            <select>
+                <option value="0">Other services:</option>
+                <option value="1"><a href="#Blood Bank">Blood Bank</a></option>
+                <option value="2"><a href="C:\Users\sonuj\OneDrive\Desktop\HEALTH SERVICE\patient_care.html">patient Care</a></option>
+                <option value="3"><a href="#Insaurance Services">Insaurance Services</a></option>
+            </select>
+        </div> -->
+        <div class="sign_in">
+            <div id="sign_up" ><b><a style="font-size: 20px" style="color: #ffffff" href="#">Join us</a></b></div>
+            <!-- <div id="Login sign_up" ><b><a style="font-size: 20px" tyle="color: #ffffff" href="#">Log in</a></b></div> -->
+        </div>
+          
+    </div>
+    <div class="container">
+        <h2>User Registration</h2>
+        <form action="register.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+
+            <label for="mobile">Mobile Number:</label>
+            <input type="number" id="mobile" name="mobile" required>
+
+            <label for="mail">Email:</label>
+            <input type="text" id="mail" name="mail" required>
+
+
+            <button type="submit">Register</button>
+            <a href="doctors.html">
+                <button type="button" onclick="searchHospitals()">Next</button>
+                </a>
+        </form>
+    </div>
+
+    <footer class="footer">
+        <div class="contain">
+         <div class="row">
+           <div class="footer-col">
+             <h4>Services</h4>
+             <ul>
+               <li><a href="#">about us</a></li>
+               <li><a href="#">our services</a></li>
+               <li><a href="#">privacy policy</a></li>
+               <li><a href="#">affiliate program</a></li>
+             </ul>
+           </div>
+           <div class="footer-col">
+             <h4>get help</h4>
+             <ul>
+               <li><a href="#">FAQ</a></li>
+               <li><a href="#">Customer Support</a></li>
+               <li><a href="#">Inquiry</a></li>
+               <!-- <li><a href="#"></a></li>
+               <li><a href="#">payment options</a></li> -->
+             </ul>
+           </div>
+           <!-- <div class="footer-col">
+             <h4>online shop</h4>
+             <ul>
+               <li><a href="#">watch</a></li>
+               <li><a href="#">bag</a></li>
+               <li><a href="#">shoes</a></li>
+               <li><a href="#">dress</a></li>
+             </ul>
+           </div> -->
+           <div class="footer-col">
+             <h4>follow us</h4>
+             <div class="social-links">
+               <a href="#"><i class="fab fa-facebook-f"></i></a>
+               <a href="#"><i class="fab fa-twitter"></i></a>
+               <a href="#"><i class="fab fa-instagram"></i></a>
+               <a href="#"><i class="fab fa-linkedin-in"></i></a>
+             </div>
+           </div>
+         </div>
+        </div>
+     </footer>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health_parameters</title>
+    <link rel="stylesheet" href="patient1.css">
+</head>
+<body>
+    <div class="nav_logo">
+        <div class="logo">
+            <h3 style="color: #ffffff;">Health service +</h3>
+        </div>
+    </div>
+    <div class="navvar">
+        <!-- <div class="box1">
+            <ul>
+                <li><a href="C:\Users\sonuj\OneDrive\Desktop\HEALTH SERVICE\Home.html">Home</a></li>
+                <li><a href="C:\Users\sonuj\OneDrive\Desktop\HEALTH SERVICE\Health_parameters.html">Health Parameters</a></li>
+                <li><a href="C:\Users\sonuj\OneDrive\Desktop\HEALTH SERVICE\Health_parameters.html">Nearby Doctors</a></li>
+                <li><a href="C:\Users\sonuj\OneDrive\Desktop\HEALTH SERVICE\report.html">My Reports</a></li>
+                <li><a href="C:\Users\sonuj\OneDrive\Desktop\HEALTH SERVICE\blood_donation.html">Blood Bank</a></li>
+                <li><a href="C:\Users\sonuj\OneDrive\Desktop\HEALTH SERVICE\patient_care.html">patient Care</a></li>
+                <li><a href="#Insaurance Services">Insaurance Services</a></li>
+            </ul>
+              
+        </div> -->
+        <!-- <div class="box"> 
+            <select>
+                <option value="0">Other services:</option>
+                <option value="1"><a href="#Blood Bank">Blood Bank</a></option>
+                <option value="2"><a href="#patient Care">patient Care</a></option>
+                <option value="3"><a href="#Insaurance Services">Insaurance Services</a></option>
+            </select>
+        </div> -->
+        <div class="sign_in">
+            <div id="sign_up" ><b><a style="font-size: 20px" style="color: #ffffff" href="#">Join us</a></b></div>
+            <!-- <div id="Login sign_up" ><b><a style="font-size: 20px" tyle="color: #ffffff" href="#">Log in</a></b></div> -->
+        </div>
+          
+    </div>
+  <div class="container4">
+    <h1>Select an Option:</h1>
+    <select id="optionSelect">
+      <option value="" disabled selected>Select an Option</option>
+      <option value="hospital">Hospital</option>
+      <option value="nurseCare">Special Nurse Care</option>
+    </select>
+
+    <div id="hospitalSection" class="hidden">
+      <h2>Select a Hospital:</h2>
+      <select id="hospitalSelect">
+        <option value="" disabled selected>Select Hospital</option>
+        <option value="DMCH">DMCH</option>
+        <option value="AIIMS Delhi">AIIMS DELHI</option>
+        <option value="AIIMS Patna">AIIMS PATNA</option>
+        <option value="AIIMS Mumbai">AIIMS MUMBAI</option>
+        <option value="Apollo Hospital">APOLLO HOSPITAL</option>
+      </select>
+      <div id="hospitalDetails" class="hidden">
+        <h3 id="hospitalName"></h3>
+        <p id="bedAvailability"></p>
+        <p id="bedsBooked"></p>
+        <p id="availableBeds"></p>
+      </div>
+    </div>
+
+    <div id="nurseCareSection" class="hidden">
+      <h2>Special Nurse Care:</h2>
+      <!-- Nurse details will be populated dynamically here -->
+    </div>
+  </div>
+
+  <script src="patient1.js"></script>
+
+</body>
+</html>

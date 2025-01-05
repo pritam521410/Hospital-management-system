@@ -1,0 +1,1 @@
+A web platform designed to streamline the appointment scheduling process in hospitals. It automates doctor availability checks and allocates appointment slots based on doctor presence and waitlisted patients. Built with HTML, CSS, JavaScript, MySQL, and Machine Learning for efficient scheduling and enhanced user experience.
